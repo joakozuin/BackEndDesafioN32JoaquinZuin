@@ -1,0 +1,31 @@
+{
+  "name": "DesafioN32",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start0": "nodemon server.js 8081 FORK ",
+    "start1": "nodemon server.js 8081 CLUSTER",
+    "start2": "nodemon --prof server.js 8081 FORK "
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "log4js": "^6.6.1",
+    "morgan": "^1.10.0"
+  }
+}

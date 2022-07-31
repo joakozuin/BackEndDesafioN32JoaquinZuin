@@ -1,0 +1,156 @@
+Statistical profiling result from sinConsoleLog-v8.log, (18086 ticks, 1 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  17413   96.3%          C:\Windows\SYSTEM32\ntdll.dll
+    662    3.7%          C:\Program Files\nodejs\node.exe
+      4    0.0%          C:\Windows\system32\KERNELBASE.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.0%   28.6%  LazyCompile: *resolve path.js:153:10
+      1    0.0%   14.3%  RegExp: y{1,4}
+      1    0.0%   14.3%  RegExp: ^\/info\/?$
+      1    0.0%   14.3%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:67:35
+      1    0.0%   14.3%  LazyCompile: *_addListener events.js:428:22
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      6    0.0%   85.7%  JavaScript
+      0    0.0%    0.0%  C++
+     30    0.2%  428.6%  GC
+  18079  100.0%          Shared libraries
+      1    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  17413   96.3%  C:\Windows\SYSTEM32\ntdll.dll
+
+    662    3.7%  C:\Program Files\nodejs\node.exe
+    395   59.7%    C:\Program Files\nodejs\node.exe
+    131   33.2%      LazyCompile: ~handleWriteReq internal/stream_base_commons.js:47:24
+    131  100.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+    131  100.0%          LazyCompile: ~Socket._writeGeneric net.js:761:42
+    131  100.0%            LazyCompile: ~Socket._write net.js:798:35
+     33    8.4%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+     33  100.0%        LazyCompile: ~Socket._writeGeneric net.js:761:42
+     33  100.0%          LazyCompile: ~Socket._writev net.js:793:36
+     33  100.0%            LazyCompile: ~doWrite internal/streams/writable.js:367:17
+     25    6.3%      LazyCompile: ~getColorDepth internal/tty.js:109:23
+     25  100.0%        LazyCompile: ~value internal/console/constructor.js:300:20
+     25  100.0%          LazyCompile: ~value internal/console/constructor.js:321:20
+     25  100.0%            LazyCompile: ~log internal/console/constructor.js:357:6
+     13    3.3%      LazyCompile: ~stringify E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\response.js:1145:20
+     13  100.0%        LazyCompile: ~json E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\response.js:250:25
+     13  100.0%          LazyCompile: ~<anonymous> file:///E:/Publico/2020_Git/2021CursoCoderHouse/2022BackEndCoderHouse/BackEndDesafioN32JoaquinZuin/src/routes/indexRoutes.js:38:21
+     13  100.0%            LazyCompile: ~handle E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\layer.js:86:49
+      9    2.3%      LazyCompile: ~end _http_outgoing.js:795:45
+      9  100.0%        LazyCompile: ~send E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\response.js:111:25
+      9  100.0%          LazyCompile: ~json E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\response.js:250:25
+      9  100.0%            LazyCompile: ~<anonymous> file:///E:/Publico/2020_Git/2021CursoCoderHouse/2022BackEndCoderHouse/BackEndDesafioN32JoaquinZuin/src/routes/indexRoutes.js:38:21
+      8    2.0%      LazyCompile: ~logger E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\morgan\index.js:103:26
+      8  100.0%        LazyCompile: ~handle E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\layer.js:86:49
+      8  100.0%          LazyCompile: ~trim_prefix E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:293:23
+      6   75.0%            LazyCompile: *next E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:177:16
+      2   25.0%            LazyCompile: ~<anonymous> E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:280:64
+      8    2.0%      LazyCompile: ~expressInit E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\middleware\init.js:29:30
+      7   87.5%        LazyCompile: ~handle E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\layer.js:86:49
+      7  100.0%          LazyCompile: ~trim_prefix E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:293:23
+      4   57.1%            LazyCompile: *next E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:177:16
+      3   42.9%            LazyCompile: ~<anonymous> E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:280:64
+      1   12.5%        LazyCompile: *trim_prefix E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:293:23
+      1  100.0%          LazyCompile: *next E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:177:16
+      1  100.0%            LazyCompile: ~query E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\middleware\query.js:39:24
+      8    2.0%      C:\Program Files\nodejs\node.exe
+      3   37.5%        LazyCompile: ~asString E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\date-format\lib\index.js:29:18
+      3  100.0%          LazyCompile: ~timestampLevelAndCategory E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\log4js\lib\layouts.js:42:35
+      3  100.0%            LazyCompile: ~colouredLayout E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\log4js\lib\layouts.js:73:24
+      1   12.5%        LazyCompile: ~stat internal/modules/cjs/loader.js:145:14
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+      1   12.5%        LazyCompile: ~setup E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\log4js\lib\appenders\index.js:128:15
+      1  100.0%          LazyCompile: ~<anonymous> E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\log4js\lib\configuration.js:51:21
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1   12.5%        LazyCompile: ~parse E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\content-type\index.js:106:16
+      1  100.0%          LazyCompile: ~setCharset E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\utils.js:248:41
+      1  100.0%            LazyCompile: ~send E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\response.js:111:25
+      1   12.5%        LazyCompile: ~FastBuffer internal/buffer.js:955:14
+      1  100.0%          LazyCompile: ~createUnsafeBuffer buffer.js:149:28
+      1  100.0%            LazyCompile: ~createPool buffer.js:158:20
+      1   12.5%        Eval: ~<anonymous> E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\streamroller\node_modules\debug\src\node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1026:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1081:37
+      7    1.8%      LazyCompile: *next E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:177:16
+      6   85.7%        LazyCompile: ~handle E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:136:31
+      6  100.0%          LazyCompile: ~router E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:46:18
+      6  100.0%            LazyCompile: ~handle E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\layer.js:86:49
+      1   14.3%        LazyCompile: ~jsonParser E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\body-parser\lib\types\json.js:98:30
+      1  100.0%          LazyCompile: ~handle E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\index.js:293:23
+      6    1.5%      LazyCompile: ~send E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\response.js:111:25
+      6  100.0%        LazyCompile: ~json E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\response.js:250:25
+      6  100.0%          LazyCompile: ~<anonymous> file:///E:/Publico/2020_Git/2021CursoCoderHouse/2022BackEndCoderHouse/BackEndDesafioN32JoaquinZuin/src/routes/indexRoutes.js:38:21
+      6  100.0%            LazyCompile: ~handle E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\layer.js:86:49
+      6    1.5%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      6  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1   16.7%          Eval: ~<anonymous> internal/process/task_queues.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1   16.7%          Eval: ~<anonymous> internal/modules/esm/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1   16.7%          Eval: ~<anonymous> internal/child_process.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1   16.7%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1   16.7%          Eval: ~<anonymous> fs.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1   16.7%          Eval: ~<anonymous> events.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      6    1.5%      LazyCompile: ~asString E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\date-format\lib\index.js:29:18
+      6  100.0%        LazyCompile: ~timestampLevelAndCategory E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\log4js\lib\layouts.js:42:35
+      6  100.0%          LazyCompile: ~colouredLayout E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\log4js\lib\layouts.js:73:24
+      6  100.0%            LazyCompile: ~<anonymous> E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\log4js\lib\appenders\console.js:5:10
+      5    1.3%      LazyCompile: ~nextTick internal/process/task_queues.js:103:18
+      2   40.0%        LazyCompile: ~onwrite internal/streams/writable.js:394:17
+      2  100.0%          LazyCompile: ~afterWriteDispatched internal/stream_base_commons.js:151:30
+      1   50.0%            LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+      1   50.0%            LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+      2   40.0%        LazyCompile: ~endReadable internal/streams/readable.js:1300:21
+      2  100.0%          LazyCompile: ~Readable.read internal/streams/readable.js:371:35
+      2  100.0%            LazyCompile: ~resume_ internal/streams/readable.js:955:17
+      1   20.0%        LazyCompile: ~emitReadable internal/streams/readable.js:535:22
+      1  100.0%          LazyCompile: ~onEofChunk internal/streams/readable.js:505:20
+      1  100.0%            LazyCompile: ~readableAddChunk internal/streams/readable.js:212:26
+      5    1.3%      LazyCompile: ~attachListener E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\morgan\node_modules\on-finished\index.js:140:24
+      5  100.0%        LazyCompile: ~onFinished E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\morgan\node_modules\on-finished\index.js:45:20
+      5  100.0%          LazyCompile: ~logger E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\morgan\index.js:103:26
+      5  100.0%            LazyCompile: ~handle E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\router\layer.js:86:49
+      4    1.0%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:973:18
+      4  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1026:37
+      4  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1081:37
+      4  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:925:33
+      4    1.0%      LazyCompile: ~update internal/crypto/hash.js:74:40
+      4  100.0%        LazyCompile: ~entitytag E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\etag\index.js:39:20
+      4  100.0%          LazyCompile: ~etag E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\etag\index.js:70:15
+      4  100.0%            LazyCompile: ~generateETag E:\Publico\2020_Git\2021CursoCoderHouse\2022BackEndCoderHouse\BackEndDesafioN32JoaquinZuin\node_modules\express\lib\utils.js:273:32
+      4    1.0%      LazyCompile: ~realpathSync fs.js:1718:22
+      4  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:360:20
+      4  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:351:17
+      4  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:367:23
+     10    1.5%    LazyCompile: ~onwrite internal/streams/writable.js:394:17
+     10  100.0%      LazyCompile: ~afterWriteDispatched internal/stream_base_commons.js:151:30
+      8   80.0%        LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+      8  100.0%          LazyCompile: ~Socket._writeGeneric net.js:761:42
+      8  100.0%            LazyCompile: ~Socket._writev net.js:793:36
+      2   20.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+      2  100.0%          LazyCompile: ~Socket._writeGeneric net.js:761:42
+      2  100.0%            LazyCompile: ~Socket._write net.js:798:35
+
